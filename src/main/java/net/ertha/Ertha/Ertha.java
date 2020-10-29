@@ -1,21 +1,21 @@
 package net.ertha.Ertha;
 
-import me.lucko.helper.plugin.ExtendedJavaPlugin;
+import org.bukkit.plugin.java.JavaPlugin;
 
-import org.bukkit.Bukkit;
+import java.net.Socket;
 
-public final class Ertha extends ExtendedJavaPlugin
+public final class Ertha extends JavaPlugin
 {
-    ErthaPluginMessages epm = new ErthaPluginMessages(this);
+    SocketClient sc = new SocketClient(this);
 
     @Override
-    public void enable()
+    public void onEnable()
     {
 
     }
 
     @Override
-    public void disable()
+    public void onDisable()
     {
         getLogger().info( "<pluginName> driver was disabled!" );
     }
