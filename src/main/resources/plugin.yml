@@ -1,6 +1,6 @@
 name: Ertha-Plugin
 version: 1.0.0
 author: Maiks86
-main: net.ertha.Ertha
+main: net.ertha.Ertha.Ertha
 api-version: 1.16
 website: https://www.ertha.network

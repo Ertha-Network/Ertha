@@ -8,7 +8,7 @@ public class SocketClient {
     private static final int SERVER_PORT = 25530;
     public Socket socket;
 
-    private Ertha e;
+    private final Ertha e;
 
     public SocketClient(Ertha ertha) {
         e = ertha;
@@ -19,7 +19,7 @@ public class SocketClient {
 
             SocketClientConnection scc = new SocketClientConnection(e, socket);
             new Thread(scc).start();
-
+            scc.send("ping");
         } catch (IOException ioException) {
             ioException.printStackTrace();
         }
